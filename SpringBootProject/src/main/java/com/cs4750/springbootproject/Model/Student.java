@@ -9,10 +9,6 @@ import jakarta.persistence.*;
 public class Student {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "student_id")
-    private long studentID;
-
     @Column(name = "Username", nullable = false, unique = true)
     private String username;
 
@@ -33,14 +29,6 @@ public class Student {
         this.password = password;
         this.email = email;
         this.name = name;
-    }
-
-    public long getStudentID() {
-        return studentID;
-    }
-
-    public void setStudentID(long studentID) {
-        this.studentID = studentID;
     }
 
     public String getUsername() {
